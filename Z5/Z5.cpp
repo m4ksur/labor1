@@ -39,7 +39,7 @@ int main() {
 		printf("\nКого вы хотите найти (фамилия или имя или факультет)? ");
 		scanf("%s", &insert);
 		printf("\nРезультат поиска:");
-		for (i = 0; i < MAX_STUDENT; i++)
+		for (i = 0; i < 3; i++)
 		{
 			if (strcmp(insert, stud[i].famil) == 0 or strcmp(insert, stud[i].name) == 0 or strcmp(insert, stud[i].facult) == 0)
 			{
@@ -47,8 +47,8 @@ int main() {
 			}
 			else
 			{
-				if (strcmp(insert, stud[i].famil) != 0 or strcmp(insert, stud[i].name) != 0 or strcmp(insert, stud[i].facult) != 0)
-					printf("Ничего не найдено");
+				if (strcmp(insert, stud[i].famil) > 1  and strcmp(insert, stud[i].name) > 1 and strcmp(insert, stud[i].facult) > 1)
+					printf(" Ничего не найдено ");
 			}
 		}
 	}
